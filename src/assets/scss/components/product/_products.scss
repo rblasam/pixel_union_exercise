@@ -1,0 +1,33 @@
+.products {
+  max-width: $max-width-content;
+  width: 95%;
+  margin: $space*5 auto;
+}
+
+  .products__grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+    .products__grid-item {
+      flex: 0 0 28%;
+      margin-bottom: $space*8;
+
+      &:not(.products__grid-item--filler) {
+        background-color: $color-white;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+        padding: $space*2;
+      }
+
+      @include mobile {
+        flex: 0 0 100%;
+      }
+    }
+    .products__grid-item--filler {
+      height: 1px;
+      padding: 0;
+
+      @include mobile {
+        display: none;
+      }
+    }

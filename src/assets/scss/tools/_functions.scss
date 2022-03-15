@@ -1,0 +1,11 @@
+@mixin mobile {
+	@media screen and (max-width: $break-point-mobile), print {
+		@content;
+	}
+}
+
+@mixin larger-than-mobile {
+	@media screen and (min-width: $break-point-mobile + 1), print {
+		@content;
+	}
+}
