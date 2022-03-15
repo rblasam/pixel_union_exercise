@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Products from '@/components/products/Products.vue'
+import Products from '@/components/products/ProductCards.vue'
 import image from "@/assets/media/logo.png"
 
 export default {
