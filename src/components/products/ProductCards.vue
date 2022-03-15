@@ -2,7 +2,7 @@
   <section class="product-cards">
     <div class="product-cards__grid">
       <div class="product-cards__grid-item" v-for="product in products" :key="product.id">
-        <ProductCard :product="product" @addToCart="handleAddToCart"/>
+        <ProductCard :product="product"/>
       </div>
       <div class="product-cards__grid-item product-cards__grid-item--filler"></div>
       <div class="product-cards__grid-item product-cards__grid-item--filler"></div>
@@ -24,15 +24,8 @@ export default {
       { id: 1, image: "shirt-1.jpeg", title: "Ultrafine Merino T-Shirt", price: 80, rating: 4 }
     ])
 
-    const handleAddToCart = (selected_product) => {
-      console.log("SELECTED PRODUCT", selected_product)
-      // console.log(handleAddToCart())
-      // console.log("SELECTED PRODUCT FIND", products.find(p => p.id == selected_product))
-    }
-
     return {
-      products,
-      handleAddToCart
+      products
     }
   }
 }

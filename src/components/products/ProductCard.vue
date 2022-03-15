@@ -28,7 +28,6 @@
 
 export default {
   name: "Product Card",
-  emits: ['addToCart'],
   props: {
     product: Object
   },
